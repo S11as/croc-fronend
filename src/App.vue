@@ -1,9 +1,18 @@
 <template>
   <div id="app">
-    <NavBar/>
-    <router-view/>
+    <div class="container-fluid" style="padding: 0">
+      <div class="row" style="margin: 0">
+        <div class="col-3" style="padding: 0">
+          <NavBar/>
+        </div>
+        <div class="col">
+          <router-view/>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
+
 <script>
 import NavBar from '@/components/NavBar'
 

@@ -1,10 +1,16 @@
 const path = require('path')
 module.exports = {
   css: {
+    requireModuleExtension: true,
     loaderOptions: {
       sass: {
         /* eslint-disable quotes */
         additionalData: `@import "@/styles/sass/global.sass"`
+      },
+      css: {
+        modules: {
+          localIdentName: '[local]-[hash:base64:5]'
+        }
       }
     }
   },
