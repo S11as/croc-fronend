@@ -1,7 +1,7 @@
 <template>
   <div class="row" :class="styles.wrapper">
     <div class="col">
-      <router-link exact :to="to" :class="styles.link" :active-class="styles.active">{{text}}</router-link>
+      <router-link :to="to" :class="styles.link" :active-class="styles.active">{{text}}</router-link>
     </div>
   </div>
 </template>

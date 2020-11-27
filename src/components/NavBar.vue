@@ -4,7 +4,7 @@
     <UserShortInfo/>
     <Separator/>
     <div class="container" :class="styles.links">
-      <NavLink to="/" text="Task list"/>
+      <NavLink to="/task-list" text="Task list"/>
       <NavLink to="/rr" text="Task list"/>
       <NavLink to="/ww" text="Task list"/>
     </div>
@@ -25,9 +25,6 @@ export default {
     return {
       styles: styles
     }
-  },
-  mounted () {
-    console.log(styles)
   }
 }
 </script>

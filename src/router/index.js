@@ -1,14 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import TaskList from '@/views/TaskList'
+import TaskList from '@/views/TaskList/TaskList'
+import TaskListCompleted from '@/views/TaskList/TaskListCompleted'
+import TaskListToDo from '@/views/TaskList/TaskListToDo'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/task-list',
     name: 'Home',
-    component: TaskList
+    component: TaskList,
+    children: [
+      {
+        path: '',
+        component: TaskListToDo
+      },
+      {
+        path: 'completed',
+        component: TaskListCompleted
+      }
+    ]
   }
   // {
   //   path: '/about',
