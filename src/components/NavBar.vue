@@ -5,7 +5,7 @@
     <Separator/>
     <div class="container" :class="styles.links">
       <NavLink to="/task-list" text="Task list"/>
-      <NavLink to="/rr" text="Task list"/>
+      <NavLink to="/algorithm" text="Algorithm"/>
       <NavLink to="/ww" text="Task list"/>
     </div>
   </div>

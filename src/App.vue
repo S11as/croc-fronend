@@ -5,7 +5,7 @@
         <div class="col-3" style="padding: 0">
           <NavBar/>
         </div>
-        <div class="col background">
+        <div class="col">
           <router-view/>
         </div>
       </div>
@@ -23,9 +23,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.background{
-  padding: 30px 100px !important;
-}
-</style>

@@ -1,8 +1,8 @@
 <template>
-  <div >
+  <section class="background">
     <TaskNav/>
     <router-view/>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -13,3 +13,9 @@ export default {
   components: { TaskNav }
 }
 </script>
+
+<style>
+.background{
+  padding: 30px 100px !important;
+}
+</style>

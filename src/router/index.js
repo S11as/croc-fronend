@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import TaskList from '@/views/TaskList/TaskList'
 import TaskListCompleted from '@/views/TaskList/TaskListCompleted'
 import TaskListToDo from '@/views/TaskList/TaskListToDo'
+import Algorithm from '@/views/Algorithm'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,10 @@ const routes = [
         component: TaskListCompleted
       }
     ]
+  },
+  {
+    path: '/algorithm',
+    component: Algorithm
   }
   // {
   //   path: '/about',

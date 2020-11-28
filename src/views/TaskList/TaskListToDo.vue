@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="task-wrapper" v-if="filteredToDoTasks.length!==0">
-      <Task v-for="task in filteredToDoTasks" :key="task.id" :task="task" :revert="true"/>
+      <Task v-for="task in filteredToDoTasks" :key="task.id" :task="task"/>
     </div>
     <div class="" v-else>
       Ничего не найдено
