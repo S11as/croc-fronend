@@ -3,7 +3,7 @@ import {
 } from '@/store/mutations.type'
 
 const state = {
-  search: 'опоа',
+  search: '',
   todoTasks: [
     {
       text: 'Заявка на регистрацию',
@@ -46,6 +46,15 @@ const getters = {
       return state.todoTasks
     }
     return state.todoTasks.filter(el => {
+      const str = el.text + ' №' + el.id + ' От ' + el.date
+      return str.includes(state.search)
+    })
+  },
+  filteredCompletedTasks (state) {
+    if (state.search === '') {
+      return state.completedTasks
+    }
+    return state.completedTasks.filter(el => {
       const str = el.text + ' №' + el.id + ' От ' + el.date
       return str.includes(state.search)
     })

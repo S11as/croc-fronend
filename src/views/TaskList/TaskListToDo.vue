@@ -1,6 +1,11 @@
 <template>
   <div class="">
-      <Task v-for="task in filteredToDoTasks" :key="task.id" :task="task"/>
+    <div class="task-wrapper" v-if="filteredToDoTasks.length!==0">
+      <Task v-for="task in filteredToDoTasks" :key="task.id" :task="task" :revert="true"/>
+    </div>
+    <div class="" v-else>
+      Ничего не найдено
+    </div>
   </div>
 </template>
 
