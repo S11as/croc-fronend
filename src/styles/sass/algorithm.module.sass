@@ -10,3 +10,27 @@
 .algorithm
   height: 100vh
   padding: 30px 150px !important
+
+.circle
+  background: $accent
+  border-radius: 50%
+  width: 65px
+  height: 65px
+  display: flex
+  justify-content: center
+  align-self: center
+  transition: $transition
+  &:hover
+    transition: $transition
+    cursor: pointer
+    background: $deep
+
+.refresh
+  position: absolute
+  top: 90%
+  right: 50px
+
+.push
+  position: absolute
+  top: 90%
+  right: 130px

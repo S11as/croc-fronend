@@ -14,6 +14,12 @@
           <FilterModule v-for="filter in algorithm" :key="filter.id" :filter="filter"
                         :card="true"/>
         </draggable>
+        <div :class="[styles.circle, styles.refresh]">
+          <img :src="refresh" alt="">
+        </div>
+        <div :class="[styles.circle, styles.push]">
+          <img :src="push" alt="">
+        </div>
       </div>
     </div>
   </section>
@@ -24,7 +30,8 @@ import styles from 'Sass/algorithm.module.sass'
 import draggable from 'vuedraggable'
 import FilterModule from '@/components/FilterModule'
 import { UPDATE_ALGORITHM, UPDATE_FILTERS } from '@/store/mutations.type'
-
+import push from 'Assets/push.svg'
+import refresh from 'Assets/refresh.svg'
 export default {
   name: 'Algorithm',
   components: { draggable, FilterModule },
@@ -48,7 +55,9 @@ export default {
   },
   data () {
     return {
-      styles: styles
+      styles: styles,
+      push: push,
+      refresh: refresh
     }
   },
   mounted () {
