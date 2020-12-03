@@ -1,0 +1,39 @@
+.checkbox
+  background: $gray
+  -webkit-appearance: none
+  width: 40px
+  height: 20px
+  border-radius: 20px
+  box-shadow: inset 0 0 5px rgba(0,0,0,.22)
+  outline: none
+  transition: $transition
+  &:hover
+    cursor: pointer
+  &:checked
+    background: $accent
+    &::before
+      left: 20px
+      top: 2px
+  &::before
+    transition: $transition
+    content: ''
+    position: absolute
+    width: 16px
+    height: 16px
+    left: 2px
+    top: 2px
+    background: $white
+    border-radius: 50%
+    box-shadow: 0 0 3px rgba(0,0,0,.22)
+
+.button
+  background: $accent
+  color: white
+  padding: 8px 16px
+  transition: $transition
+  border-radius: 10px
+  border: none
+  margin-top: 300px
+  &:hover
+    cursor: pointer
+    background: $deep

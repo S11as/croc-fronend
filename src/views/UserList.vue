@@ -9,27 +9,19 @@
 <script>
 import styles from 'Sass/user-list.module.sass'
 import UserModule from '@/components/UserModule'
+import { mapState } from 'vuex'
 
 export default {
   name: 'UserList',
   components: { UserModule },
+  computed: {
+    ...mapState({
+      users: state => state.users.users
+    })
+  },
   data () {
     return {
-      styles: styles,
-      users: [
-        {
-          name: 'Руслан Виноградов',
-          unsolved: 10,
-          solvedToday: 10,
-          dayNorm: 100,
-          solvedMonth: 10,
-          monthNorm: 100,
-          available: true
-        },
-        {},
-        {},
-        {}
-      ]
+      styles: styles
     }
   }
 }

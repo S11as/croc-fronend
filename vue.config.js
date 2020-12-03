@@ -10,7 +10,8 @@ module.exports = {
       css: {
         modules: {
           localIdentName: '[local]-[hash:base64:5]'
-        }
+        },
+        localsConvention: 'dashesOnly'
       }
     }
   },

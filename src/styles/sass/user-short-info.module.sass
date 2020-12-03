@@ -1,6 +1,10 @@
 .wrapper
-  padding: 0 100px !important
   margin: 25px 0 35px 0
+  padding: 0 !important
+
+.wrapper-padding
+  padding: 0 100px !important
+
 
 .circle
   width: 70px
@@ -8,6 +12,9 @@
   background: $background
   border-radius: 50%
 
+.circle-dark
+  @extend .circle
+  background: $dark-gray
 .name
   font-size: 16px
 
@@ -19,3 +26,5 @@
   align-items: center
   flex-direction: column
   align-self: center
+
+

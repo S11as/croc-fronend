@@ -1,3 +1,26 @@
 .wrapper
   border-bottom: 1px solid $gray
-  padding: 18px 0
+  padding-left: 0 !important
+  padding-right: 0 !important
+  padding-top: 18px
+  padding-bottom: 18px
+  &:hover
+    cursor: pointer
+
+.content
+  height: 0
+  overflow: hidden
+
+
+.link
+  background: $accent
+  border-radius: 10px
+  color: $white
+  transition: $transition
+  padding: 3px 12px
+  margin-left: 12px
+  &:hover
+    color: $white
+    transition: $transition
+    text-decoration: none
+    background: $deep

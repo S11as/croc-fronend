@@ -1,18 +1,18 @@
 <template>
-  <div class="container" :class="[styles.wrapper]">
+  <div class="container" :class="[padding ? styles.wrapperPadding : '', styles.wrapper]">
     <div class="row">
       <div class="col-auto">
-        <div :class="styles.circle"></div>
+        <div :class="[dark ? styles.circleDark : styles.circle]"></div>
       </div>
       <div class="col container" :class="styles.center">
         <div class="row justify-content-center">
           <div class="col-auto" :class="styles.name">
-            Роман Виноградов
+            {{ user.lastname ? user.lastname : 'Имя не указано' }}
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-auto" :class="styles.department">
-            Финансовый отдел
+            {{ user.department ? user.department : 'Отдел не указан' }}
           </div>
         </div>
       </div>
@@ -25,6 +25,20 @@ import styles from 'Sass/user-short-info.module.sass'
 
 export default {
   name: 'UserShortInfo',
+  props: {
+    user: {
+      default: () => ({
+        lastname: 'Роман Виноградов',
+        department: 'Финансовый отдел'
+      })
+    },
+    dark: {
+      default: false
+    },
+    padding: {
+      default: true
+    }
+  },
   data () {
     return {
       styles: styles
