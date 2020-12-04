@@ -6,6 +6,7 @@ import TaskListToDo from '@/views/TaskList/TaskListToDo'
 import Algorithm from '@/views/Algorithm'
 import UserList from '@/views/UserList'
 import User from '@/views/User'
+import UserTasks from '@/views/UserTasks'
 
 Vue.use(VueRouter)
 
@@ -32,6 +33,10 @@ const routes = [
   {
     path: '/users',
     component: UserList
+  },
+  {
+    path: '/user/:id/tasks',
+    component: UserTasks
   },
   {
     path: '/user/:id',

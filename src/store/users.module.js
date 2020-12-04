@@ -3,7 +3,23 @@ import {
 } from '@/store/mutations.type'
 
 const state = {
-  search: '',
+  currentTasks: [
+    {
+      text: 'Заявка на регистрацию',
+      id: '3412324',
+      date: '24.11.20'
+    },
+    {
+      text: 'Заявка на патент',
+      id: '3412325',
+      date: '24.11.20'
+    },
+    {
+      text: 'Заявка на заявку',
+      id: '3412326',
+      date: '24.11.20'
+    }
+  ],
   users: [
     {
       id: '111',

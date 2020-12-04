@@ -1,5 +1,6 @@
 <template>
   <section class="container">
+    <img :src="left" alt="" :class="styles.back" @click="goBack">
     <div class="row">
       <div class="col-3">
         <UserShortInfo :dark="true" :padding="false"/>
@@ -23,6 +24,7 @@
 import styles from 'Sass/user.module.sass'
 import UserShortInfo from '@/components/UserShortInfo'
 import { UPDATE_USER } from 'Store/mutations.type.js'
+import left from 'Assets/left.svg'
 
 export default {
   name: 'User',
@@ -30,6 +32,7 @@ export default {
   data () {
     return {
       styles: styles,
+      left: left,
       userModel: {
         available: false
       }
@@ -41,6 +44,9 @@ export default {
   methods: {
     changeUser () {
       this.$store.commit(UPDATE_USER, this.userModel)
+    },
+    goBack () {
+      this.$router.push('/users')
     }
   }
 }
